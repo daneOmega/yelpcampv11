@@ -1,4 +1,4 @@
-// sdf
+
 var express     = require("express"),
     app         = express(),
     bodyParser  = require("body-parser"),
@@ -18,7 +18,8 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
  
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
-mongoose.connect(url);
+
+mongoose.connect("mongodb://logic:sell1234@ds131373.mlab.com:31373/yelpcamp222");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
